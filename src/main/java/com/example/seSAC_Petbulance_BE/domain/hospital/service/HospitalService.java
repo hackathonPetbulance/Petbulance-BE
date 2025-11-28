@@ -1,7 +1,11 @@
 package com.example.seSAC_Petbulance_BE.domain.hospital.service;
 
+import com.example.seSAC_Petbulance_BE.domain.hospital.dto.response.DetailHospitalResDto;
 import com.example.seSAC_Petbulance_BE.domain.hospital.dto.response.HospitalMatchingResDto;
+import com.example.seSAC_Petbulance_BE.domain.hospital.entity.Hospital;
 import com.example.seSAC_Petbulance_BE.domain.hospital.repository.HospitalRepository;
+import com.example.seSAC_Petbulance_BE.global.common.error.exception.CustomException;
+import com.example.seSAC_Petbulance_BE.global.common.error.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +18,7 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 public class HospitalService {
+
     private final HospitalRepository hospitalRepository;
 
     /*GET /matching?filter=IS_OPEN_NOW&species=RABBIT&userLat=37.5665&userLng=126.9780
@@ -33,4 +38,8 @@ public class HospitalService {
         );
     }
 
+    public DetailHospitalResDto detailHospital(Long hospitalId, Double lat, Double lng) {
+        return hospitalRepository.findHospitalDetail(hospitalId, lat, lng);
+
+    }
 }

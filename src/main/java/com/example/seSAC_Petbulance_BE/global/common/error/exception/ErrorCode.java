@@ -9,7 +9,8 @@ import org.springframework.http.HttpStatus;
 public enum ErrorCode {
 
     TEST_ERROR_CODE(HttpStatus.BAD_REQUEST, "오류가 발생하였습니다."),
-    INVALID_FILTER_VALUE(HttpStatus.BAD_REQUEST, "유효하지 않은 filter 값 입니다.");
+    INVALID_FILTER_VALUE(HttpStatus.BAD_REQUEST, "유효하지 않은 filter 값 입니다."),
+    NOT_FOUND_HOSPITAL(HttpStatus.NOT_FOUND, "병원정보를 찾을 수 없습니다.");
 
     private final HttpStatus status;
     private final String message;

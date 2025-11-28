@@ -1,5 +1,6 @@
 package com.example.seSAC_Petbulance_BE.domain.hospital.repository;
 
+import com.example.seSAC_Petbulance_BE.domain.hospital.dto.response.DetailHospitalResDto;
 import com.example.seSAC_Petbulance_BE.domain.hospital.dto.response.HospitalMatchingResDto;
 
 import java.time.DayOfWeek;
@@ -15,4 +16,6 @@ public interface HospitalRepositoryCustom {
             DayOfWeek today,
             LocalTime now
     );
+    DetailHospitalResDto findHospitalDetail(Long hospitalId, Double lat, Double lng);
+
 }
