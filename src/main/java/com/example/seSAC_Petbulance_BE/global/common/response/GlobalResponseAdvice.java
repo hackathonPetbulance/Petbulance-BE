@@ -10,7 +10,7 @@ import org.springframework.http.server.ServletServerHttpResponse;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
-@RestControllerAdvice(basePackages = "com.example.Petbulance_BE")
+@RestControllerAdvice(basePackages = "com.example")
 public class GlobalResponseAdvice implements ResponseBodyAdvice<Object> {
 
     @Override
