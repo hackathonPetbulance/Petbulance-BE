@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Profile;
 public class FirebaseInitializer {
     public static void initialize() throws IOException {
         FileInputStream serviceAccount = new FileInputStream("/home/ubuntu/Petbulance-BE/src/main/resources/petbulance-b316f-firebase-adminsdk-fbsvc-8c92a7aab5.json");
-///home/ubuntu/Petbulance-BE/src/main/resources/petbulance-b316f-firebase-adminsdk-fbsvc-8c92a7aab5.json
+//      /home/ubuntu/Petbulance-BE/src/main/resources/petbulance-b316f-firebase-adminsdk-fbsvc-8c92a7aab5.json
+        //src/main/resources/petbulance-b316f-firebase-adminsdk-fbsvc-8c92a7aab5.json
         FirebaseOptions options = FirebaseOptions.builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                 .build();
